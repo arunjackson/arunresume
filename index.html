@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arun N — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1a18;--ink2:#444441;--ink3:#888780;
+  --paper:#FAF9F6;--accent:#D85A30;--accent2:#3B6D11;
+  --line:rgba(0,0,0,0.1);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh}
+.page{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+
+.header{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:end;padding-bottom:1.5rem;border-bottom:1.5px solid var(--ink)}
+.name{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:700;line-height:1;letter-spacing:-0.02em}
+.name span{color:var(--accent)}
+.tagline{font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink3);margin-top:0.5rem;font-weight:500}
+.contact-block{text-align:right;font-size:0.8rem;color:var(--ink2);line-height:2}
+.contact-block a{color:var(--accent);text-decoration:none}
+
+.section{margin-top:2rem}
+.section-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem}
+.section-label::after{content:'';flex:1;height:1px;background:var(--line)}
+
+.summary{font-size:0.95rem;line-height:1.75;color:var(--ink2);border-left:3px solid var(--accent);padding-left:1.25rem}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:0.5rem}
+.stat{background:var(--ink);color:var(--paper);border-radius:4px;padding:1rem 1.1rem}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;line-height:1}
+.stat-label{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.6;margin-top:0.25rem}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.skill-group h4{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem;font-weight:500}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:0.75rem;padding:4px 10px;border:1px solid var(--line);border-radius:2px;color:var(--ink2);background:white}
+
+.jobs{display:flex;flex-direction:column;gap:0}
+.job{display:grid;grid-template-columns:auto 1fr;gap:0 1.25rem;position:relative}
+.job-line{display:flex;flex-direction:column;align-items:center}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:4px}
+.vline{flex:1;width:1px;background:var(--line);margin:6px 0}
+.job:last-child .vline{display:none}
+.job-content{padding-bottom:1.8rem}
+.job-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5rem;margin-bottom:0.5rem}
+.job-title{font-size:1rem;font-weight:500;color:var(--ink)}
+.job-company{font-size:0.85rem;color:var(--accent);font-weight:500}
+.job-date{font-size:0.78rem;color:var(--ink3);font-weight:400;white-space:nowrap}
+.job-points{list-style:none;font-size:0.85rem;color:var(--ink2);line-height:1.65}
+.job-points li{padding-left:1rem;position:relative;margin-bottom:2px}
+.job-points li::before{content:'—';position:absolute;left:0;color:var(--ink3)}
+
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.ach{border:1px solid var(--line);border-radius:4px;padding:0.9rem 1rem;background:white}
+.ach-val{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--accent2)}
+.ach-desc{font-size:0.75rem;color:var(--ink3);margin-top:3px;line-height:1.4}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:500px){.two-col{grid-template-columns:1fr}.header{grid-template-columns:1fr}.contact-block{text-align:left}}
+
+.edu-item{font-size:0.9rem}
+.edu-degree{font-weight:500}
+.edu-school{color:var(--ink2);font-size:0.85rem;margin-top:2px}
+.edu-year{color:var(--ink3);font-size:0.8rem}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:0.8rem;padding:5px 14px;border-radius:20px;background:var(--ink);color:var(--paper);font-weight:400}
+.pill.light{background:white;border:1px solid var(--line);color:var(--ink2)}
+
+.footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:0.75rem;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+
+@media print {
+  body { background: white; }
+  .page { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div>
+      <div class="name">Arun <span>N</span></div>
+      <div class="tagline">Sales · Customer Success · Account Executive</div>
+    </div>
+    <div class="contact-block">
+      <div>Bangalore, India</div>
+      <div>+91 6361711846</div>
+      <div><a href="mailto:arunjackson293@gmail.com">arunjackson293@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/arun-n-050375191/" target="_blank">LinkedIn Profile</a></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-label">Profile</div>
+    <p class="summary">High-performing Sales &amp; Customer Success professional with strong experience managing US-based clients, closing high-ticket deals, and driving consistent revenue growth across EdTech and SaaS. Proven track record of generating multi-crore revenue, maintaining 30–35%+ conversion rates, and building long-term customer relationships across US time zones.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">By the numbers</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">₹2.5Cr+</div><div class="stat-label">Total Revenue</div></div>
+      <div class="stat"><div class="stat-num">35%</div><div class="stat-label">Avg Conversion Rate</div></div>
+      <div class="stat"><div class="stat-num">₹95K</div><div class="stat-label">Avg Ticket Size</div></div>
+      <div class="stat"><div class="stat-num">3×</div><div class="stat-label">Performer of the Month</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Core skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Sales &amp; Revenue</h4>
+        <div class="skill-tags">
+          <span class="tag">Full Cycle Sales</span>
+          <span class="tag">Consultative Selling</span>
+          <span class="tag">High Ticket Closing</span>
+          <span class="tag">Pipeline Management</span>
+          <span class="tag">Lead Qualification</span>
+          <span class="tag">Negotiation</span>
+          <span class="tag">Upselling</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Customer Success</h4>
+        <div class="skill-tags">
+          <span class="tag">US Client Management</span>
+          <span class="tag">Lifecycle Management</span>
+          <span class="tag">Account Retention</span>
+          <span class="tag">Onboarding</span>
+          <span class="tag">Churn Reduction</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="skill-tags">
+          <span class="tag">Salesforce CRM</span>
+          <span class="tag">HubSpot</span>
+          <span class="tag">Zoho CRM</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Experience</div>
+    <div class="jobs">
+      <div class="job">
+        <div class="job-line"><div class="dot"></div><div class="vline"></div></div>
+        <div class="job-content">
+          <div class="job-header">
+            <div><span class="job-title">Senior Academic Counsellor</span> <span class="job-company">· BrightCHAMPS</span></div>
+            <span class="job-date">May 2025 – Present</span>
+          </div>
+          <ul class="job-points">
+            <li>Managed full-cycle consultative sales for US customers across multiple time zones</li>
+            <li>Generated ₹95,000 ATS high-ticket enrollments; delivered ₹1 Crore+ total revenue from US market</li>
+            <li>Maintained 30%+ conversion rate across inbound and outbound pipeline</li>
+            <li>Owned complete sales funnel from lead qualification to onboarding</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-line"><div class="dot"></div><div class="vline"></div></div>
+        <div class="job-content">
+          <div class="job-header">
+            <div><span class="job-title">Business Development Associate</span> <span class="job-company">· Playto Labs</span></div>
+            <span class="job-date">Jan 2024 – Apr 2025</span>
+          </div>
+          <ul class="job-points">
+            <li>Generated ₹1.5 Crore+ total revenue; achieved ₹15L+ monthly during peak months</li>
+            <li>Maintained 35%+ conversion rate across full sales lifecycle</li>
+            <li>Managed and mentored a team of 3 sales associates</li>
+            <li>Led onboarding, retention and upselling initiatives · Awarded Performer of the Month 3×</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-line"><div class="dot"></div><div class="vline"></div></div>
+        <div class="job-content">
+          <div class="job-header">
+            <div><span class="job-title">Business Development Associate</span> <span class="job-company">· Zylu (SaaS)</span></div>
+            <span class="job-date">Oct 2023 – Dec 2023</span>
+          </div>
+          <ul class="job-points">
+            <li>Built early-stage sales pipeline and contributed to revenue growth</li>
+            <li>Conducted discovery calls, product demos and negotiations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-line"><div class="dot"></div><div class="vline"></div></div>
+        <div class="job-content">
+          <div class="job-header">
+            <div><span class="job-title">Business Development Associate</span> <span class="job-company">· BYJU'S</span></div>
+            <span class="job-date">Apr 2023 – Aug 2023</span>
+          </div>
+          <ul class="job-points">
+            <li>Generated ₹30L+ total revenue through consultative selling</li>
+            <li>Closed high-intent leads with ₹65,000 ATS</li>
+            <li>Consistently achieved and exceeded monthly sales targets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Key achievements</div>
+    <div class="achievements-grid">
+      <div class="ach"><div class="ach-val">₹1.5 Cr+</div><div class="ach-desc">Revenue at Playto Labs</div></div>
+      <div class="ach"><div class="ach-val">₹1 Cr+</div><div class="ach-desc">US market revenue at BrightCHAMPS</div></div>
+      <div class="ach"><div class="ach-val">₹30 L+</div><div class="ach-desc">Revenue at BYJU'S</div></div>
+      <div class="ach"><div class="ach-val">Team of 3</div><div class="ach-desc">Sales team managed &amp; mentored</div></div>
+      <div class="ach"><div class="ach-val">30–35%</div><div class="ach-desc">Consistent conversion rate</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <div class="section-label">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech – Civil Engineering</div>
+          <div class="edu-school">Dayananda Sagar Academy of Technology &amp; Management, Bengaluru</div>
+          <div class="edu-year">2018 – 2022</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Languages</div>
+        <div class="pill-row">
+          <span class="pill">English</span>
+          <span class="pill">Hindi</span>
+          <span class="pill">Kannada</span>
+          <span class="pill">Telugu</span>
+        </div>
+        <div class="section-label" style="margin-top:1.25rem">Interests</div>
+        <div class="pill-row">
+          <span class="pill light">Dance</span>
+          <span class="pill light">Video Editing</span>
+          <span class="pill light">Storytelling</span>
+          <span class="pill light">Short Film Making</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Seeking remote Sales · Customer Success · Account Executive roles</span>
+    <span>arunjackson293@gmail.com</span>
+  </div>
+</div>
+</body>
+</html>
